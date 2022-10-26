@@ -1,21 +1,26 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
 # Blog App 
  
 > The Blog App will is a fully functional website that will show the list of posts and allows readers to interact with them by adding comments and liking posts.
 
+# Features
+
+- Create users
+- Creat posts
+- Comment posts
 
 ## Built With
 
-- [x] Ruby (programming language)
-- [x] Rails (framework)
-- [x] PostgreSQL (database)
-- [x] Linters: [Rubocop](https://rubocop.org/)
-- [x] Linters: [Stylent](https://stylelint.io/)
-- [x] Visual Studio Code (code editor)
-- [x] RSpec (testings) 
+- Ruby (programming language)
+- Rails (framework)
+- PostgreSQL (database)
+- Linters: [Rubocop](https://rubocop.org/)
+- Linters: [Stylent](https://stylelint.io/)
+- Visual Studio Code (code editor)
+- RSpec (testing) 
 
 ## Getting Started
 
