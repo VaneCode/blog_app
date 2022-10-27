@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+first_user = User.find_by(name: 'Tom')
+second_user = User.find_by(name: 'Lilly')
+
+4.times do 
+    Post.create do |post| 
+        post.user = first_user
+        post.title = Faker::Lorem.unique.sentence
+        post.text = Faker::Lorem.paragraphs(number: 1)
+        post.likes_counter = 0
+        post.comments_counter = 0
+    end
+end
+
+50.times do 
+    Comment.create do |comment|
+        comment.post = Post.all.sample 
+        comment.user = second_user 
+        comment.text = Faker::Lorem.unique.sentence
+    end
+end

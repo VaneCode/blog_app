@@ -15,6 +15,9 @@ gem 'pg', '~> 1.1'
 # Use for hiding credentials
 gem 'dotenv-rails'
 
+# Use for faking data
+gem 'faker'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
