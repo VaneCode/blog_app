@@ -43,7 +43,7 @@ RSpec.describe Post, type: :model do
   end
 
   context 'Test post methods' do
-    it 'After create the post, the author.posts_counter has to update' do
+    it 'After create the post, the author.posts_counter has to be updated' do
       user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
       4.times do
         Post.create do |post|
