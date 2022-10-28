@@ -27,10 +27,17 @@ RSpec.describe User, type: :model do
   end
 
   context 'Test user methods' do
-    it 'After create the post, the posts_counter has to update' do
+    it 'recent_posts should return the 3 recent post for a given user' do
       user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-      first_post = Post.create(author: user, title: 'Hello', text: 'This is my first post')
-      expect(user.posts_counter).to eq 1
+      10.times do
+        Post.create do |post|
+          post.author = user
+          post.title = Faker::Lorem.unique.sentence
+          post.text = Faker::Lorem.paragraphs(number: 1)
+        end
+      end
+      post = user.recent_posts
+      expect(post.size).to eq 3
     end
   end
 end
