@@ -26,3 +26,4 @@ end
         comment.text = Faker::Lorem.unique.sentence
     end
 end
+
