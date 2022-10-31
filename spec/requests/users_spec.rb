@@ -17,15 +17,35 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
-  context "If a correct template was rendered" do
-    it 'should render to index template' do
-      get '/'
-      expect(response).to render_template(:index)
+  context 'If a correct template was rendered' do
+    describe 'Render /' do
+      it 'should render to index template' do
+        get '/'
+        expect(response).to render_template(:index)
+      end
     end
 
-    it 'should render to show template' do
-      get '/users/show'
-      expect(response).to render_template(:show)
+    describe 'Render /users/show' do
+      it 'should render to show template' do
+        get '/users/show'
+        expect(response).to render_template(:show)
+      end
+    end
+  end
+
+  context 'If the response body includes correct placeholder text' do
+    describe 'index placeholder' do
+      it 'should include the text Here is a list of all users' do
+        get '/'
+        expect(response.body).to include('Here is a list of all users')
+      end
+    end
+
+    describe 'show placeholder' do
+      it 'should include the text Here is a single user' do
+        get '/users/show'
+        expect(response.body).to include('Here is a single user')
+      end
     end
   end
 end
