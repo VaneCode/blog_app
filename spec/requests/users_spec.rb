@@ -16,4 +16,16 @@ RSpec.describe 'Users', type: :request do
       end
     end
   end
+
+  context "If a correct template was rendered" do
+    it 'should render to index template' do
+      get '/'
+      expect(response).to render_template(:index)
+    end
+
+    it 'should render to show template' do
+      get '/users/show'
+      expect(response).to render_template(:show)
+    end
+  end
 end
