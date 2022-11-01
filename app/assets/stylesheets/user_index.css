@@ -1,0 +1,14 @@
+.users_section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.single_user {
+  display: flex;
+  gap: 2rem;
+}
+
+.single_user_info {
+  display: flex;
+}
