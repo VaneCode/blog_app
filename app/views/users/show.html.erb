@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Here is a single user</p>
+<section class="user_section">
+<%= render "user", user: @user %>
+<div class="bio">
+ <h3>Bio</h3>
+ <p> <%= @user.bio %></p>
+</div>
+</section>
+<section class="user_posts_section">
+ <%= render @user.recent_posts%>
+  <%= link_to user_posts_path(@user), class: "all_posts_btn_link" do %>
+        <button type="button" class="all_posts_btn">See all posts</button>
+   <% end %>
+<section>

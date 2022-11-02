@@ -1,0 +1,71 @@
+.user_section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background-color: rgba(0, 174, 255, 0.3);
+  padding: 0.8em;
+  border-left: 0.5rem inset var(--azure);
+}
+
+.bio h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bio p {
+  font-family: var(--text-font);
+  letter-spacing: 0.1em;
+}
+
+.user_posts_section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.single_post_resume {
+  background-color: rgba(7, 15, 19, 0.205);
+  border-radius: 0.5rem;
+  padding: 0.8em;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.single_post_resume p {
+  font-family: var(--text-font);
+}
+
+.single_post_resume div {
+  align-self: end;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.all_posts_btn_link {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.all_posts_btn {
+  color: var(--white-color);
+  border-color: orangered;
+  border-right: 0.2rem inset var(--warm-grey);
+  border-bottom: 0.2rem inset var(--warm-grey);
+  background-color: orangered;
+  font-family: var(--text-font);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-weight: bold;
+}

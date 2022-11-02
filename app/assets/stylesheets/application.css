@@ -61,4 +61,15 @@ main {
   flex-direction: column;
 }
 
+section {
+  width: 95%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--title-font);
+  color: var(--azure);
+}
+
 /* * { border: 1px solid black; } */
