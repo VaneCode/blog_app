@@ -1,0 +1,19 @@
+.post_section {
+  margin: 1rem 0 1rem 0;
+}
+
+#post_header_div {
+  display: flex;
+  gap: 0.3rem;
+}
+
+#post_header_div h3 {
+  flex: 2;
+  font-size: 2rem;
+}
+
+#post_header_div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
