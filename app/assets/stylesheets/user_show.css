@@ -57,7 +57,7 @@
   margin: 0.5rem;
 }
 
-.all_posts_btn {
+.button {
   color: var(--white-color);
   border-color: orangered;
   border-right: 0.2rem inset var(--warm-grey);
@@ -68,4 +68,5 @@
   letter-spacing: 0.2em;
   text-align: center;
   font-weight: bold;
+  cursor: grab;
 }
