@@ -44,7 +44,7 @@
   font-family: var(--text-font);
 }
 
-.single_post_resume div {
+.single_post_resume #counter_div {
   align-self: end;
   display: flex;
   gap: 0.5rem;
