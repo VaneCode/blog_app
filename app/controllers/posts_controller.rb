@@ -14,14 +14,20 @@ class PostsController < ApplicationController
 
   def create
     @author = current_user
-    @post = Post.new(params.require(:post).permit(:title, :text))
+    @post = Post.new(post_params)
     @post.author = @author
     if @post.save
-      flash[:success] = 'Post saved successfully.'
+      flash[:notice] = 'Post saved successfully.'
       redirect_to user_path(@author.id)
     else
       flash.now[:error] = 'Error: Post could not be saved.'
       render :new
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
