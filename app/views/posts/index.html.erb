@@ -4,7 +4,9 @@
 <section class="user_posts_section">
 <% @user.posts.each do |post| %>
  <%= render partial:"post", locals:{post: post}%>
- <%= render partial:"post_comments", locals:{comments: post.recent_comments}%>
+ <div class="comments_div">
+   <%= render post.recent_comments%>
+ </div>
 <%end%>
  <button type="button" class="button pag_btn">Pagination</button>
 <section>

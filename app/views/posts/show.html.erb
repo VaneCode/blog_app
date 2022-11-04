@@ -9,5 +9,8 @@
 </div>
 </section>
 <section class="comment_section">
-<%= render partial:"post_comments", locals:{comments: @post.comments}%>
+<div class="comments_div">
+ <%= render @post.comments%>
+</div>
+<%= render partial:"comments/comment_frm"%>
 </section>
