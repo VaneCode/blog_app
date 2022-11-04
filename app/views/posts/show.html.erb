@@ -2,8 +2,7 @@
 <div class="single_post_resume">
 <div id="post_header_div">
 <h3><%= @post.title%> by <%= @post.author.name %></h3>
- <span>Comments: <%= @post.comments_counter %></span>
- <span>Likes: <%= @post.likes_counter %></span>
+ <%= render partial:"shared_partials/counters_post", locals:{post: @post}%>
  </div>
  <p><%= @post.text %></p>
 </div>

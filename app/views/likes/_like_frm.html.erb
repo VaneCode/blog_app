@@ -1,0 +1,8 @@
+
+<%= form_with model: Like, url: user_post_likes_path(user, post), class: "like-form" do |f| %>
+    <div>
+      <%= f.submit "Like", class: "button" do %>
+       <i class="fa-solid fa-gem fa-rotate-180"></i>
+      <%end%>
+    </div>
+<% end %>
