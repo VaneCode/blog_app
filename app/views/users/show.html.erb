@@ -7,7 +7,8 @@
 </section>
 <section class="user_posts_section">
  <%= render @user.recent_posts%>
-  <%= link_to user_posts_path(@user), class: "all_posts_btn_link" do %>
-        <button type="button" class="button">See all posts</button>
-   <% end %>
+ <div class="posts_section_btns">
+  <%= render partial:'shared_partials/all_posts_btn', locals: {user: @user}%>
+  <%= render partial:'shared_partials/new_post_btn', locals: {user: @user}%>
+ </div>
 <section>

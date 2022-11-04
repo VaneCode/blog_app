@@ -50,11 +50,12 @@
   gap: 0.5rem;
 }
 
-.all_posts_btn_link {
-  flex: 1;
+.posts_section_btns {
   display: flex;
-  justify-content: center;
+  justify-items: center;
+  gap: 3rem;
   margin: 0.5rem;
+  align-self: center;
 }
 
 .button {
@@ -62,6 +63,7 @@
   border-color: orangered;
   border-right: 0.2rem inset var(--warm-grey);
   border-bottom: 0.2rem inset var(--warm-grey);
+  border-radius: 0.5rem;
   background-color: orangered;
   font-family: var(--text-font);
   font-size: 1rem;
@@ -69,4 +71,7 @@
   text-align: center;
   font-weight: bold;
   cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }

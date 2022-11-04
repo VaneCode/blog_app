@@ -5,6 +5,7 @@
 #post_header_div {
   display: flex;
   gap: 0.3rem;
+  align-content: center;
 }
 
 #post_header_div h3 {
