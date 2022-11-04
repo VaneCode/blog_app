@@ -1,5 +1,11 @@
-<%= form_with model: Post, url: user_posts_path, class: "create-post-form" do |f|  %>
-  <%= f.text_field :title, placeholder:"Title" %>
-  <%= f.text_area :text, placeholder:"Write your content..."%>
-  <%= f.submit "Submit", class: "button" %><br>
+<%= form_with model: Post, url: user_posts_path, class: "form" do |f|  %>
+  <div>
+   <%= f.text_field :title, placeholder:"Title", id:"post_title", autofocus: true %>
+  </div>
+  <div>
+   <%= f.text_area :text, placeholder:"Write your content...", id:"post_text"%>
+  </div>
+  <div id="buttons_div">
+   <%= f.submit "Save your post", class: "button" %>
+  </div>
 <% end %>

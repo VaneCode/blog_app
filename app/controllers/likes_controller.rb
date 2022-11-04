@@ -8,8 +8,6 @@ class LikesController < ApplicationController
 
     if @like.save
       redirect_to user_post_path(@p_author, @post)
-      # redirect_back_or_to(fallback_location, allow_other_host: true)
-      # render template: "shared_partials/counters_post", locals: {post: @post}
     else
       flash.now[:error] = 'Error: Like could not be saved.'
       render :new
