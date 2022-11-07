@@ -5,11 +5,12 @@ RSpec.describe User, type: :feature do
     before(:each) do
       @photo = 'https://unsplash.com/photos/F_-0BxGuVvo'
       @user = User.create(name: 'Tom', photo: @photo, bio: 'Teacher from Mexico.')
-      @post1 = Post.create(author: @user, title: 'Hello1', text: 'This is my first post')
-      @post2 = Post.create(author: @user, title: 'Hello2', text: 'This is my second post')
-      @post3 = Post.create(author: @user, title: 'Hello3', text: 'This is my third post')
-      @post4 = Post.create(author: @user, title: 'Hello4', text: 'This is my fourth post')
-      visit user_path(@user.id)
+      @post1 = Post.create(author: @user, title: 'Hello 1', text: 'This is my first post')
+      @post2 = Post.create(author: @user, title: 'Hello 2', text: 'This is my second post')
+      @post3 = Post.create(author: @user, title: 'Hello 3', text: 'This is my third post')
+      @post4 = Post.create(author: @user, title: 'Hello 4', text: 'This is my fourth post')
+      @id = @user.id
+      visit user_path(@id)
     end
 
     it 'Should display the user\'s profile picture.' do
@@ -29,10 +30,10 @@ RSpec.describe User, type: :feature do
     end
 
     it 'Should display the user\'s first three posts' do
-        expect(page).to have_content('This is my second post')
-        expect(page).to have_content('This is my third post')
-        expect(page).to have_content('This is my fourth post')
-        expect(page).not_to have_content('This is my first post')
+      expect(page).to have_content('This is my second post')
+      expect(page).to have_content('This is my third post')
+      expect(page).to have_content('This is my fourth post')
+      expect(page).not_to have_content('This is my first post')
     end
 
     it 'Should display a button that lets visitor view all of a user\'s posts' do
@@ -40,13 +41,13 @@ RSpec.describe User, type: :feature do
     end
 
     it 'When a user\'s post is clicked, it should redirect to that post\'s show page.' do
-      click_link(@post1.title)
-      expect(page).to have_current_path(user_post_path(@user, @post1))
+      click_link(@post2.title)
+      expect(page).to have_current_path(user_post_path(@post2.author, @post2))
     end
 
     it 'When See all posts clicked, it should redirect to the user\'s post\'s index page' do
-      click_button('See all posts')
+      click_link('See all posts')
       expect(page).to have_current_path(user_posts_path(@user))
     end
-end
+  end
 end
