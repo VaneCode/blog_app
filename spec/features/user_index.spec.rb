@@ -25,8 +25,8 @@ RSpec.describe User, type: :feature do
     end
 
     it 'Should display the number of posts the user has written.' do
-      expect(page).to have_content("Number of post: #{@user1.posts_counter}")
-      expect(page).to have_content("Number of post: #{@user2.posts_counter}")
+      expect(page).to have_content("Number of posts: #{@user1.posts_counter}")
+      expect(page).to have_content("Number of posts: #{@user2.posts_counter}")
     end
 
     it 'When a user is clicked, it should redirect to that user\'s show page.' do
