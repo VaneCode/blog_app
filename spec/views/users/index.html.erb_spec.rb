@@ -12,5 +12,12 @@ RSpec.describe 'users/index.html.erb', type: :view do
           expect(page).to have_content(user.name)
       end
     end
+
+    it 'i can see the profile picture for each usere'
+      @users.each do |user|
+          expect(page).to have_content(user.photo)
+      end
+  end
+
   end
 end
