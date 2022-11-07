@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'users/index.html.erb', type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'index page' do
+    before(:each) do
+        visit users_path
+        @users = User.all
+    end
+  end
 end
