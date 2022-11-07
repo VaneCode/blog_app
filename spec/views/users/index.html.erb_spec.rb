@@ -19,5 +19,10 @@ RSpec.describe 'users/index.html.erb', type: :view do
       end
   end
 
+  it 'i can see the number of posts each user has written'
+      @users.each do |user|
+        expect(page).to have_content(user.post)
+    end
+  end
   end
 end
