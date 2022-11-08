@@ -1,0 +1,37 @@
+.section_frm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    border: solid 1px red;
+}
+
+.section_frm h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.div_log_frm form{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.field input{
+    width: 100%;
+}
+
+.login_btn{
+    flex: 1;
+}
+
+.div_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap:0.5rem;
+}
