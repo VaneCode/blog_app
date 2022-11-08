@@ -6,7 +6,7 @@
 </div>
 </section>
 <section class="user_posts_section">
- <%= render @user.recent_posts%>
+ <%= render @posts%>
  <div class="posts_section_btns">
   <%= render partial:'shared_partials/all_posts_btn', locals: {user: @user}%>
   <%= render partial:'shared_partials/new_post_btn', locals: {user: @user}%>
