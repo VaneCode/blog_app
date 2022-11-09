@@ -21,7 +21,7 @@ class Ability
 
     # Users with role admin have all permissions for all resources
 
-    return unless user.role == 'admin'
+    return unless user.admin?
 
     can :manage, :all
   end
