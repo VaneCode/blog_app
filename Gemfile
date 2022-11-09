@@ -18,6 +18,9 @@ gem 'pg', '~> 1.1'
 # Use for hiding credentials
 gem 'dotenv-rails'
 
+# cancan
+gem 'cancancan'
+
 # Use for faking data
 gem 'faker'
 
