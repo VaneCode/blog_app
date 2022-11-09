@@ -6,7 +6,13 @@
 </div>
 </section>
 <section class="user_posts_section">
- <%= render @posts%>
+<% if @posts.empty? %>
+<div class="empty_div">
+  <h2>Posts are coming soon!</h2>
+</div>
+<% else %>
+  <%= render @posts%>
+<% end %>
  <div class="posts_section_btns">
   <%= render partial:'shared_partials/all_posts_btn', locals: {user: @user}%>
   <%= render partial:'shared_partials/new_post_btn', locals: {user: @user}%>

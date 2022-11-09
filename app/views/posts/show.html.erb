@@ -6,11 +6,16 @@
  </div>
  <p><%= @post.text %></p>
 </div>
+<div class="action_div">
+
+</div>
 </section>
 <section class="comment_section">
+<% unless @comments.empty? %>
 <div class="comments_div">
  <%= render @comments%>
-</div>
+ </div>
+<% end %>
 </section>
 <section class="frm_section">
 <h3>Please share your comments with us!</h3>

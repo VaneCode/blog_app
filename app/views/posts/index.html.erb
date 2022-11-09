@@ -2,11 +2,17 @@
 <%= render partial:"users/user", locals: {user: @user} %>
 </section>
 <section class="user_posts_section">
-<% @posts.each do |post| %>
- <%= render partial:"post", locals:{post: post}%>
- <div class="comments_div">
-   <%= render post.recent_comments%>
- </div>
-<%end%>
+<% if @posts.empty? %>
+<div class="empty_div">
+  <h2>Posts are coming soon!</h2>
+</div>
+<% else %>
+  <% @posts.each do |post| %>
+  <%= render partial:"post", locals:{post: post}%>
+  <div class="comments_div">
+    <%= render post.recent_comments%>
+  </div>
+  <%end%>
+<% end %>
  <button type="button" class="button pag_btn">Pagination</button>
 <section>
