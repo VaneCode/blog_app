@@ -1,16 +1,16 @@
 <section class="section_frm">
-<div>
+<div class="div_title">
 <h1>Welcome to NomadDev!</h1>
 </div>
 
 <div class="div_log_frm">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your email"%><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your email", class: "input"%><br>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Your password" %><br>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Your password", class: "input"%><br>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -20,7 +20,7 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="actions div_buttons">
     <%= f.submit "Log in", class: "button login_btn"%><br>
   </div>
  <% end %>

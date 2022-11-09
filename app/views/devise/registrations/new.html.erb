@@ -1,36 +1,42 @@
-<h2>Sign up</h2>
-<section class="scetion_frm">
 
-</section>
+<section class="section_frm">
+<div class="div_title">
+<h2>Sign up</h2>
+</div>
+<div class="div_log_frm">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true, placeholder:"User name", class: "input" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"User email", class: "input" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"Password", class: "input" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Confirmate password", class: "input" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up", class: 'button' %>
+  <div class="actions div_buttons">
+    <%= f.submit "Sign up", class: "button login_btn" %>
   </div>
 <% end %>
+</div>
 
+<div class="div_links">
 <%= render "devise/shared/links" %>
+</div>
+
+</section>
+
+
+
