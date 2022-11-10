@@ -11,6 +11,27 @@
 .single_comment_div {
   display: flex;
   font-family: var(--text-font);
+  gap: 0.3rem;
+}
+
+.single_comment_div #commenter_div {
+  flex: 1;
+}
+
+.single_comment_div #comment_text_div {
+  flex: 10;
+}
+
+.single_comment_div #delete_div {
+  flex: 1;
+}
+
+#delete_div form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pag_btn {

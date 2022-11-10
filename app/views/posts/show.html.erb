@@ -6,11 +6,20 @@
  </div>
  <p><%= @post.text %></p>
 </div>
+<div class="action_div">
+<% if can? :destroy, @post %>
+  <%= form_with model: @post, url: user_post_path(@post.author, @post), method: :delete do |f| %>
+    <%= f.submit "Delete Post", class: "button" %>
+  <% end %>
+<% end %>
+</div>
 </section>
 <section class="comment_section">
+<% unless @comments.empty? %>
 <div class="comments_div">
  <%= render @comments%>
-</div>
+ </div>
+<% end %>
 </section>
 <section class="frm_section">
 <h3>Please share your comments with us!</h3>

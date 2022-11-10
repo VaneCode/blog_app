@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
   end
@@ -16,6 +18,14 @@ class CommentsController < ApplicationController
     else
       flash.now[:error] = 'Error: Comment could not be saved.'
       render :new
+    end
+  end
+
+  def destroy
+    Comment.find(params[:id]).destroy
+
+    respond_to do |format|
+      format.html { redirect_to user_posts_path(current_user), notice: 'Comment deleted!' }
     end
   end
 

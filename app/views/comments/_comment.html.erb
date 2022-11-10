@@ -1,6 +1,17 @@
 
     <div class="single_comment_div">
-    <p><strong><%= comment.author.name %>:</strong></p>
-    <p><%= comment.text %></p>
+    <div id="commenter_div">
+      <p><strong><%= comment.author.name %>:</strong></p>
+    </div>
+    <div id="comment_text_div">
+      <p><%= comment.text %></p>
+    </div>
+    <div id="delete_div">
+    <% if can? :destroy, comment %>
+        <%= form_with model: comment, url: user_post_comment_path(comment.author, comment.post, comment), method: :delete do |form| %>
+            <%= form.submit "X", class: "button" %>
+        <% end %>
+    <% end %>
+    </div>
     </div>
  
