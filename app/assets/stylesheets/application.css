@@ -74,7 +74,7 @@ h3 {
   color: var(--azure);
 }
 
-.empty_div{
+.empty_div {
   background-color: rgba(7, 15, 19, 0.205);
   border-radius: 0.5rem;
   padding: 0.8em;

@@ -2,7 +2,7 @@
   margin: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
-  gap:0.5rem;
+  gap: 0.5rem;
 }
 
 #post_header_div {
@@ -22,7 +22,7 @@
   justify-content: center;
 }
 
-.action_div{
+.action_div {
   width: 100%;
   display: flex;
   justify-content: end;
