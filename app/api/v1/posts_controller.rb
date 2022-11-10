@@ -1,4 +1,4 @@
-class Api::V1::PostsController < ApplicationController
+class Api::V1::PostsController < Api::V1::ApplicationController
   def index
     @posts = User.find(params[:user_id]).posts
 

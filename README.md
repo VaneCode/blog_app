@@ -10,9 +10,10 @@
 
 # Features
 
-- Create users
-- Creat posts
-- Comment posts
+- Login.
+- Create a new user.
+- Create posts.
+- Interact with posts, commenting on them and liking them.
 
 ## Built With
 

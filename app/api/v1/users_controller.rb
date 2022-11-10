@@ -1,10 +1,10 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
   def index
-    users = User.all.order('id ASC')
-    if users
-      render json: { status: 'SUCCESS', message: 'Fetched all the users successfully', data: users }, status: :ok
+    @users = User.all.order(id: :asc)
+    if @users
+      render json: { status: 'SUCCESS', message: 'Fetched all the users successfully', data: @users }, status: :ok
     else
-      render json: users.errors, status: :bad_request
+      render json: @users.errors, status: :bad_request
     end
   end
 
