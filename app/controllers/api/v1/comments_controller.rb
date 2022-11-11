@@ -1,4 +1,8 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
+  # skip_before_action :verify_authenticity_token
+
+  before_action :authenticate_request
+
   def index
     @comments = Post.find(params[:post_id]).comments
     if @comments
@@ -11,7 +15,7 @@ class Api::V1::CommentsController < Api::V1::ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
-    @comment.author = current_user
+    @comment.author = @current_user
     @comment.post = @post
     if @comment.save
       render json: { status: 'SUCCESS', message: 'Comment was created successfully!', data: comment },

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   
   namespace :api do # /api
     namespace :v1 do # /api/v1
+      post '/login', to: 'authentication#login'
       resources :users do # api/v1/users
         resources :posts, format: :json do # api/v1/users/:user_id/posts
           resources :comments, format: :json # api/v1/users/:user_id/posts/:post_id/comments

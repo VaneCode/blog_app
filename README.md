@@ -15,11 +15,23 @@
 - Create posts.
 - Interact with posts, commenting on them and liking them.
 
+# API
+
+> This project works also as an API, so you can try the following endpoints:
+
+- Login
+- Sing up
+- See all posts for a given user
+- See all comments for a given user's post
+- Create a new comment 
+
 ## Built With
 
 - Ruby (programming language)
 - Rails (framework)
 - PostgreSQL (database)
+- Devise gem (authentication)
+- Cancancan gem (authorization)
 - Linters: [Rubocop](https://rubocop.org/)
 - Linters: [Stylent](https://stylelint.io/)
 - Visual Studio Code (code editor)
