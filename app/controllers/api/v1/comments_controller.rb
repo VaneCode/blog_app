@@ -1,6 +1,4 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
-  # skip_before_action :verify_authenticity_token
-
   before_action :authenticate_request
 
   def index
