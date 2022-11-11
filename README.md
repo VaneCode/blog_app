@@ -19,10 +19,10 @@
 
 > This project works also as an API, so you can try with Postman the following endpoints:
 
-1 Aunthentication with JWT localhost:3000/api/v1/login
-2 See all posts for a given user localhost:3000/api/v1/users/:user_id/posts
-3 See all comments for a given user's post /api/v1/users/:user_id/posts/:post_id/comments 
-4 Create a new comment for a post localhost:3000/api/v1/users/:user_id/posts/:post_id/comments/new
+ 1. Aunthentication with JWT localhost:3000/api/v1/login
+ 2. See all posts for a given user localhost:3000/api/v1/users/:user_id/posts
+ 3. See all comments for a given user's post /api/v1/users/:user_id/posts/:post_id/comments 
+ 4. Create a new comment for a post localhost:3000/api/v1/users/:user_id/posts/:post_id/comments/new
 
 * For routes 2 and 3 a JWT token is needed.
 
