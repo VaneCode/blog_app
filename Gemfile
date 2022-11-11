@@ -27,6 +27,9 @@ gem 'jwt'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 
+# Use for documentation you API enpoints
+gem 'rswag'
+
 # Use for faking data
 gem 'faker'
 
