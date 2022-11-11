@@ -21,6 +21,12 @@ gem 'dotenv-rails'
 # Use for restricting what resources a given user is allowed to access
 gem 'cancancan'
 
+# Use Jason Web Token (JWT) for token based authentication
+gem 'jwt'
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt'
+
 # Use for faking data
 gem 'faker'
 
